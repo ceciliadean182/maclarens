@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/logo5.svg">
+    <!-- meta -->
+    <meta name="description" content="Las mejores noches se viven en MacLaren's. Reservá tu mesa">
+    <meta name="keywords" content="MacLarens, pub, picadas, comida, tragos, eventos, reservas, agenda, social, corporativo, cumpleaños, montevideo, new york">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://kit.fontawesome.com/4c415a2f53.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark navegacion">
+            <div class="container-fluid navegacion__contenedor">
+                <h1 class="navegacion__titulo">MACLAREN'S</h1>
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../img/logo5.svg" class="navegacion__logo" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="comida.html">Comidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tragos.html">Tragos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Fiestas
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="galeria.html">Galería</a></li>
+                                <li><a class="dropdown-item" href="proximas_fechas.html">Próximas fechas</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <h2 class="main__titulo">Reservá tu lugar</h2>
+        <section class="contacto">
+            
+        <!-- formaulario de contacto -->
+            <form action="#" enctype="application/x-www-form-urlencoded" method="GET" class="formulario">
+                
+                    <label for="nombre">Nombre Completo</label></br>
+                    <input type="text" name="nombre" id="nombre"></br>
+                
+                
+                    <label for="email">Email</label></br>
+                    <input type="email" name="email" id="email" placeholder="juan@hola.com"></br>
+                  
+                
+                    <label for="telefono">Teléfono</label></br>
+                    <input type="number" name="telefono" id="telefono" placeholder="095700684"></br>
+                
+                <label for="evento">Tipo de evento</label><br>
+                <select name="evento">
+                    <option class="formulario__evento" value="Cumpleaños">Cumpleaños</option>
+                    <option class="formulario__evento" value="Corporativo">Corporativo</option>
+                    <option class="formulario__evento" value="Social">Social</option>
+                </select>
+                <br>
+            
+                <label for="fecha">Fecha deseada</label><br>
+                <input type="date" name="fecha_reserva" value="2021-05-22" min="2021-05-22" max="2022-12-31"><br>
+            
+                
+            
+                <label for="metodo_de_pago">Método de pago</label><br>
+                <select name="pago">
+                    <option class="formulario__pago" value="tarjeta">Tarjeta de crédito</option>
+                    <option class="formulario__pago" value="efectivo">Efectivo</option>
+                    <option class="formulario__pago" value="cheque">Cheque</option>
+                </select>
+                <br>
+                <label for="personas">Cantidad de personas</label><br>
+                <select name="personas">
+                    <option class="formulario__personas" value="5-10">5-10</option>
+                    <option class="formulario__personas" value="15-25">15-25</option>
+                    <option class="formulario__personas" value="25-40">25-40</option>
+                </select>
+                <br>
+                <label for="comentarios">Comentarios adicionales</label><br>
+                <textarea name="comentarios" cols="43" rows="4" placeholder="Comentarios adicionales"></textarea><br>
+            
+                <label for="promociones">¿Aceptas recibir promociones vía mail?</label>
+                <input class="formulario__promociones" type="checkbox"><br><br>
+            
+                <button class="formulario__reservar">Reservar</button>
+                <button class="formulario__borrar">Borrar</button>
+                
+            </form> 
+         <!-- fin formulario de contacto -->
+        </section>
+    </div>
+    <footer class="footer">
+        <h5 class="footer__titulo">MacLaren's Pub 2021</h5> 
+        <i class="fab fa-facebook fa-2x footer__item footer__item--fb"></i>
+        <i class="fab fa-instagram fa-2x footer__item footer__item--ig"></i>
+        <i class="fab fa-twitter fa-2x footer__item footer__item--tw"></i>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</body>
+</html>
