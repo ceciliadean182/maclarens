@@ -129,9 +129,9 @@
   background-color: black;
   background-size: cover;
   background-position: center;
-  transition: all 1ms ease-in-out;
+  /*transition: all 1ms ease-in-out;*/
   background-image: url("../img/slider1.jpeg");
-  animation: banner 21s infinite linear; }
+  animation: banner 15s infinite; }
 
 .banner__content {
   margin: 0;
@@ -139,7 +139,8 @@
   width: 100%;
   height: 100%;
   color: whitesmoke;
-  background-color: rgba(255, 189, 89, 0.2);
+  /*background-color: rgba(255,189,89,.2);*/
+  background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: center;
