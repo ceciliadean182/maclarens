@@ -105,7 +105,6 @@
 
 .main {
   background-color: whitesmoke;
-  padding: 20px;
   height: 100%; }
   .main .main__titulo {
     font-size: 1.5rem;
@@ -122,18 +121,77 @@
 
 /* paleta de colores */
 /* fuentes */
-.promociones {
-  display: flex;
-  justify-content: center; }
-  .promociones .promociones__item {
-    background-color: black;
-    color: whitesmoke;
-    border: none;
-    height: 100%; }
-    .promociones .promociones__item .promociones__img {
-      height: 100%;
-      object-fit: cover; }
+.banner {
+  position: relative;
+  /* para que se muestre desp de la barra de nav */
+  width: 100%;
+  height: 60vh;
+  background-color: black;
+  background-size: cover;
+  background-position: center;
+  transition: all 1ms ease-in-out;
+  background-image: url("../img/slider1.jpeg");
+  animation: banner 21s infinite linear; }
 
+.banner__content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  color: whitesmoke;
+  background-color: rgba(255, 189, 89, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.banner__content h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  font-size: 2.5rem; }
+
+.banner__content a {
+  text-decoration: none;
+  color: whitesmoke;
+  padding: 0.6rem 1.3rem;
+  border: 1px whitesmoke solid;
+  transition: all .3s ease-in-out; }
+
+.banner__content a:hover {
+  background-color: black;
+  border: 1px black solid;
+  color: #ffbd59; }
+
+@keyframes banner {
+  0% {
+    background-image: url("../img/slider1.jpeg"); }
+  33% {
+    background-image: url("../img/slider1.jpeg"); }
+  34% {
+    background-image: url("../img/slider2.jpeg"); }
+  66% {
+    background-image: url("../img/slider2.jpeg"); }
+  67% {
+    background-image: url("../img/slider3.jpeg"); }
+  100% {
+    background-image: url("../img/slider3.jpeg"); } }
+
+/*promociones {
+   @include flex-center;
+
+    .promociones__item {
+        background-color:$negro;
+        color:$blanco;
+        border:none;
+        height:100%;
+        
+        .promociones__img {
+            height:100%;
+            object-fit: cover;
+        }  
+    }
+}*/
 .presentacion {
   display: flex;
   justify-content: center; }
@@ -145,9 +203,10 @@
     font-weight: bold;
     margin-top: 1.5rem; }
 
+/*
 .card-group {
-  flex-wrap: column; }
-
+    flex-wrap: column;
+}*/
 /* paleta de colores */
 /* fuentes */
 .contacto {
