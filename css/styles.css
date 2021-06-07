@@ -110,7 +110,8 @@
     font-size: 1.5rem;
     font-family: "Roboto Mono", monospace;
     color: #fda219;
-    padding-bottom: 20px;
+    margin-top: 1.5rem;
+    padding-bottom: 1.5rem;
     text-align: center; }
   @media only screen and (min-width: 768px) {
     .main .main__titulo {
@@ -125,44 +126,59 @@
   position: relative;
   /* para que se muestre desp de la barra de nav */
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   background-color: black;
   background-size: cover;
   background-position: center;
-  /*transition: all 1ms ease-in-out;*/
+  transition: all 0.2s ease-in-out;
   background-image: url("../img/slider1.jpeg");
-  animation: banner 15s infinite; }
+  animation: banner linear 15s infinite; }
 
 .banner__content {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  color: whitesmoke;
-  /*background-color: rgba(255,189,89,.2);*/
-  background-color: rgba(255, 255, 255, 0.2);
+  /*background-color: rgba(255,189,89,0.5);*/
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  justify-content: center; }
+
+.banner__content__info {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  color: whitesmoke;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  animation: pulse;
+  /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1.5s; }
 
 .banner__content h2 {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
-  font-size: 2.5rem; }
+  padding-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-family: "Roboto Mono", monospace; }
+
+.banner__content p {
+  text-align: center;
+  max-width: 50%;
+  text-align: justify;
+  padding-bottom: 1.5rem; }
 
 .banner__content a {
   text-decoration: none;
   color: whitesmoke;
   padding: 0.6rem 1.3rem;
   border: 1px whitesmoke solid;
+  border-radius: .3rem;
   transition: all .3s ease-in-out; }
 
 .banner__content a:hover {
-  background-color: black;
-  border: 1px black solid;
-  color: #ffbd59; }
+  background-color: #ffbd59;
+  border: 1px #ffbd59 solid;
+  color: black; }
 
 @keyframes banner {
   0% {
@@ -178,21 +194,18 @@
   100% {
     background-image: url("../img/slider3.jpeg"); } }
 
-/*promociones {
-   @include flex-center;
+.promociones {
+  display: flex;
+  justify-content: center; }
+  .promociones .promociones__item {
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    height: 100%; }
+    .promociones .promociones__item .promociones__img {
+      height: 100%;
+      object-fit: cover; }
 
-    .promociones__item {
-        background-color:$negro;
-        color:$blanco;
-        border:none;
-        height:100%;
-        
-        .promociones__img {
-            height:100%;
-            object-fit: cover;
-        }  
-    }
-}*/
 .presentacion {
   display: flex;
   justify-content: center; }
@@ -204,10 +217,9 @@
     font-weight: bold;
     margin-top: 1.5rem; }
 
-/*
 .card-group {
-    flex-wrap: column;
-}*/
+  flex-wrap: column; }
+
 /* paleta de colores */
 /* fuentes */
 .contacto {
