@@ -127,7 +127,7 @@
   position: relative;
   /* para que se muestre desp de la barra de nav */
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-color: black;
   background-size: cover;
   background-position: center;
@@ -136,7 +136,7 @@
   animation: banner linear 15s infinite; }
 
 .banner__content {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -155,16 +155,48 @@
   /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1.5s; }
 
+@media only screen and (min-width: 1024px) {
+  .banner {
+    height: 70vh; }
+  .banner__content {
+    flex-direction: column; }
+  .banner__content__info {
+    padding: 1rem;
+    padding-bottom: 2rem; }
+  .banner__content h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem; }
+  .banner__content p {
+    text-align: center;
+    max-width: 50%;
+    text-align: justify; } }
+
+@media only screen and (min-width: 768px) {
+  .banner {
+    height: 70vh; }
+  .banner__content {
+    flex-direction: column; }
+  .banner__content__info {
+    padding: 1rem;
+    padding-bottom: 2rem; }
+  .banner__content h2 {
+    padding-bottom: 1.5rem;
+    font-size: 2.5rem; }
+  .banner__content p {
+    text-align: center;
+    max-width: 50%;
+    text-align: justify; } }
+
 .banner__content h2 {
   margin: 0;
   padding: 0;
   padding-bottom: 1.5rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Roboto Mono", monospace; }
 
 .banner__content p {
   text-align: center;
-  max-width: 50%;
+  max-width: 100%;
   text-align: justify;
   padding-bottom: 1.5rem; }
 
