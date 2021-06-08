@@ -17,8 +17,10 @@
   .header .navegacion__titulo {
     font-size: 1.5rem;
     font-family: "Roboto Mono", monospace;
-    color: #ffbd59;
     margin-right: .4rem; }
+    .header .navegacion__titulo .navegacion__titulo--link {
+      text-decoration: none;
+      color: #ffbd59; }
   .header .navegacion__titulo:hover {
     color: #fda219; }
   .header .navegacion__logo {
