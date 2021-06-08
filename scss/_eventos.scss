@@ -1,0 +1,25 @@
+@import "generales.scss";
+
+
+
+.eventos {
+    text-align: center;
+
+        .eventos__fechas {
+            font-family:$contenidos;
+            font-size:1rem; 
+            color:$negro;
+            letter-spacing: 0.1rem;
+            
+            .eventos__fechas--styles {
+                font-family:$principal;
+                color:$peach;
+                font-weight: bold;
+                font-size: 1rem;
+            }
+        }
+        .eventos__fechas--styles:hover { 
+            border-bottom: $peach 3px solid;
+            
+        }
+}

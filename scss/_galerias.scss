@@ -1,0 +1,119 @@
+@import "generales.scss";
+
+/* comida */
+.comida {
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows:300px;
+    grid-row-gap:15px;
+
+    .comida__multimedia--img {
+        width:100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+    .comida__multimedia--img:hover {
+        border:$peach 2px solid;
+    }
+}        
+@media only screen and (min-width:768px) {
+    .comida {
+        grid-template-columns: repeat(3,1fr);
+    }
+    .comida__multimedia {
+        grid-row: span 2;
+        grid-column:span 3;
+    }
+}
+@media only screen and (min-width:1024px) {
+    .comida {
+        grid-template-columns: repeat(6,1fr);
+        grid-column-gap:15px
+    }
+    .comida__multimedia {
+        grid-column:span 3;
+    }
+}
+
+/* galería */
+
+.galeriaContainer {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-auto-rows: 200px;
+    grid-gap:5px;
+}
+
+.itemImagen {
+    width:100%;
+    height: 100%;
+    object-fit: cover; /*la imagen ocupa ese ancho/alto pero sin distorsión*/
+}
+
+.containerImagen:nth-child(1) {
+    grid-column: span 2;
+}
+.containerImagen:nth-child(2) {
+    grid-column: span 2;
+}
+.containerImagen:nth-child(3) {
+    grid-column: span 2;
+}
+
+.containerImagen:nth-child(4) {
+    grid-column: span 2;
+}
+.containerImagen:nth-child(5) {
+    grid-column: span 2;
+}
+.containerImagen:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.containerImagen:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.containerImagen:nth-child(8) {
+    grid-column: span 2;
+}
+.containerImagen:nth-child(9) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.containerImagen:nth-child(10) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.containerImagen:nth-child(11) {
+    grid-column: span 2;
+}
+.containerImagen:nth-child(12) {
+    grid-column: span 2;
+}
+
+@media only screen and (min-width:768px) {
+    .galeriaContainer {
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .galeriaContainer {
+        grid-template-columns: repeat(6,1fr);
+        grid-auto-rows: 300px;
+    }
+    .containerImagen:nth-child(2) {
+        grid-row: span 2;
+    }
+    .containerImagen:nth-child(11) {
+        grid-row: span 2;
+    }
+}
+
+
+
+

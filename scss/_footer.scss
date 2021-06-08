@@ -1,0 +1,37 @@
+@import "generales.scss";
+
+.footer {
+    background:$negro;
+    text-align: center;
+    height:auto;
+    width:100%;
+    border-top:$peach 2px solid;
+    
+    .footer__titulo {
+        font-size: 1.1rem; 
+        color:$peach;
+        font-family:$principal;
+        margin-top:1rem;
+        padding-bottom:5px;
+    }
+
+    .footer__item {
+        color:$peach;
+        margin-bottom:1rem;
+    }
+
+    $redes: ( /*Declaramos nuestro mapa*/
+        fb:  #3b5998,
+        ig: crimson,
+        tw: deepskyblue
+    ); 
+/*Creamos el bucle para usar los valores del mapa*/
+    @each $red, $color in $redes {
+        .footer__item--#{$red}:hover {
+            color: $color;
+            transform: rotateZ(360deg);
+            transition:1s;
+        }
+    }
+
+}

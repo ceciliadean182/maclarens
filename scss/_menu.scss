@@ -1,0 +1,52 @@
+@import "generales.scss";
+
+.tragos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+}
+
+.opciones {
+    background-color: $negro;
+    text-align: center;
+    margin-bottom:2.5rem;
+    box-shadow: 0px 0px 5px 5px $negro;
+    padding: 10px;
+    border-radius: 5px;
+    height:auto;
+    max-width: 360px;
+}
+.opciones__img {
+    border-radius:$radius-mobile;
+}
+
+.opciones__nombre {
+    font-family: $principal;
+    font-size: 1.5rem;
+    color:$peach;
+    padding-bottom: 10px;
+}
+
+.opciones__precio {
+    margin-top:2rem;
+    font-family: $principal;
+    font-size: 1.5rem;
+    color:$peach;
+}
+
+@for $i from 1 through 6 {
+    .opciones:nth-child(#{$i}) .opciones__img:hover {
+        @if ($i % 2 == 0) { 
+            animation:pulse; /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 0.5s;
+             /* número par */
+
+        }@else {
+            animation:headShake;
+            animation-duration: 1s;
+            
+        }  
+    } 
+}

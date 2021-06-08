@@ -1,0 +1,167 @@
+@import "generales.scss";
+
+@mixin flex-center {
+    display:flex;
+    justify-content: center;
+}
+.banner {
+    position:relative; /* para que se muestre desp de la barra de nav */
+    width:100%;
+    height:90vh;
+    background-color: $negro;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s ease-in-out;
+    background-image: url("../img/slider1.jpeg");
+    animation: banner linear 15s infinite;
+}
+.banner__content {
+    margin:0px;
+    padding:0;
+    width:100%;
+    height:100%;
+    /*background-color: rgba(255,189,89,0.5);*/
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+.banner__content__info {
+    background-color: rgba(0,0,0,0.5);
+    font-family: $contenidos;
+    color:$blanco;
+    padding:1rem;
+    padding-bottom:2rem;
+    animation:pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 1.5s;
+    
+}
+
+@media only screen and (min-width:1024px) {
+    .banner {
+        height:70vh;
+    }    
+    .banner__content {
+        flex-direction:column;
+    }
+    .banner__content__info {
+        padding:1rem;
+        padding-bottom:2rem;
+    }
+    .banner__content h2 {
+        padding-bottom: 1.5rem;
+        font-size: 2.5rem; 
+    }  
+    .banner__content p {
+        text-align: center;
+        max-width: 50%;
+        text-align: justify;
+    }
+}
+@media only screen and (min-width:768px) {
+    .banner {
+        height:70vh;
+    }    
+    .banner__content {
+        flex-direction:column;
+    }
+    .banner__content__info {
+        padding:1rem;
+        padding-bottom:2rem;
+    }
+    .banner__content h2 {
+        padding-bottom: 1.5rem;
+        font-size: 2.5rem; 
+    }  
+    .banner__content p {
+        text-align: center;
+        max-width: 50%;
+        text-align: justify;
+    }
+}
+
+.banner__content h2 {
+    margin:0;
+    padding:0;
+    padding-bottom: 1.5rem;
+    font-size:2rem;
+    font-family: $principal;
+}
+.banner__content p {
+    text-align: center;
+    max-width: 100%;
+    text-align: justify;
+    padding-bottom:1.5rem;
+}
+.banner__content a {
+    text-decoration: none;
+    color:$blanco;
+    padding:0.6rem 1.3rem;
+    border: 1px $blanco solid;
+    border-radius:.3rem;
+    transition:all .3s ease-in-out;
+}
+.banner__content a:hover {
+    background-color: $peach;
+    border: 1px $peach solid;
+    color:$negro;
+}
+@keyframes banner {
+    0% {
+        background-image: url("../img/slider1.jpeg");
+    }
+    33% {
+        background-image: url("../img/slider1.jpeg");
+    }
+    34% {
+        background-image: url("../img/slider2.jpeg");
+    }
+    66% {
+        background-image: url("../img/slider2.jpeg");
+    }
+    67% {
+        background-image: url("../img/slider3.jpeg");
+    }
+    100% {
+        background-image: url("../img/slider3.jpeg");
+    }
+}
+
+
+
+    
+
+
+
+
+.promociones {
+   @include flex-center;
+
+    .promociones__item {
+        background-color:$negro;
+        color:$blanco;
+        border:none;
+        height:100%;
+        
+        .promociones__img {
+            height:100%;
+            object-fit: cover;
+        }  
+    }
+}
+
+.presentacion {
+    @include flex-center;
+
+    .presentacion__textos {
+        font-size:$contenidos;
+        font-size:1rem;
+        width:50%;
+        color:$negro;
+        font-weight: bold;
+        margin-top:1.5rem;
+    }
+}
+
+.card-group {
+    flex-wrap: column;
+}

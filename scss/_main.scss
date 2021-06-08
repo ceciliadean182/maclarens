@@ -1,0 +1,31 @@
+@import "generales.scss";
+
+
+* {
+    margin:0;
+    padding:0;
+}
+.main {
+    padding:20px;
+    background-color:$blanco;
+    height:100%;
+
+    .main__titulo {
+        font-size:1.5rem;
+        font-family:$principal;
+        color:$peach-intenso;
+        margin-top:1.5rem;
+        padding-bottom:1.5rem;
+        text-align: center;
+    }
+    @media only screen and (min-width:768px) {
+        .main__titulo {
+            font-size: 1.8rem;
+        }    
+    } 
+    @media only screen and (min-width:1024px) {
+        .main__titulo {
+            font-size: 2.5rem;
+        }    
+    }       
+}
