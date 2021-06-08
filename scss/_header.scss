@@ -21,8 +21,12 @@
     .navegacion__titulo {
         font-size:1.5rem;
         font-family: $principal;
-        color:$peach;
         margin-right:.4rem;
+        
+            .navegacion__titulo--link {
+                text-decoration: none;
+                color:$peach;
+            }
     }
 
     .navegacion__titulo:hover {
