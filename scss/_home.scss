@@ -14,117 +14,120 @@
     transition: all 0.2s ease-in-out;
     background-image: url("../img/slider1.jpeg");
     animation: banner linear 15s infinite;
-}
-.banner__content {
-    margin:0px;
-    padding:0;
-    width:100%;
-    height:100%;
-    /*background-color: rgba(255,189,89,0.5);*/
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-.banner__content__info {
-    background-color: rgba(0,0,0,0.5);
-    font-family: $contenidos;
-    color:$blanco;
-    padding:1rem;
-    padding-bottom:2rem;
-    animation:pulse; /* referring directly to the animation's @keyframe declaration */
-    animation-duration: 1.5s;
+
+    .banner__content {
+        margin:0px;
+        padding:0;
+        width:100%;
+        height:100%;
+        /*background-color: rgba(255,189,89,0.5);*/
+        @include flex-center;
+        flex-direction:column;
+    }    
+
+        .banner__content h2 {
+            margin:0;
+            padding:0;
+            padding-bottom: 1.5rem;
+            font-size:2rem;
+            font-family: $principal;
+        }
+        .banner__content p {
+            max-width: 100%;
+            text-align:justify;
+            padding-bottom:1.5rem;
+            font-size: $font-size-mobile;
+        }
+        .banner__content a {
+            text-decoration:none;
+            color:$blanco;
+            padding:0.6rem 1.3rem;
+            border: 1px $blanco solid;
+            border-radius:.3rem;
+            transition:all .3s ease-in-out;
+        }
+        .banner__content a:hover {
+            background-color: $peach;
+            border: 1px $peach solid;
+            color:$negro;
+        }
     
-}
-
-@media only screen and (min-width:1024px) {
-    .banner {
-        height:70vh;
-    }    
-    .banner__content {
-        flex-direction:column;
-    }
-    .banner__content__info {
-        padding:1rem;
-        padding-bottom:2rem;
-    }
-    .banner__content h2 {
-        padding-bottom: 1.5rem;
-        font-size: 2.5rem; 
-    }  
-    .banner__content p {
-        text-align: center;
-        max-width: 50%;
-        text-align: justify;
-    }
-}
-@media only screen and (min-width:768px) {
-    .banner {
-        height:70vh;
-    }    
-    .banner__content {
-        flex-direction:column;
-    }
-    .banner__content__info {
-        padding:1rem;
-        padding-bottom:2rem;
-    }
-    .banner__content h2 {
-        padding-bottom: 1.5rem;
-        font-size: 2.5rem; 
-    }  
-    .banner__content p {
-        text-align: center;
-        max-width: 50%;
-        text-align: justify;
-    }
-}
-
-.banner__content h2 {
-    margin:0;
-    padding:0;
-    padding-bottom: 1.5rem;
-    font-size:2rem;
-    font-family: $principal;
-}
-.banner__content p {
-    text-align: center;
-    max-width: 100%;
-    text-align: justify;
-    padding-bottom:1.5rem;
-}
-.banner__content a {
-    text-decoration: none;
-    color:$blanco;
-    padding:0.6rem 1.3rem;
-    border: 1px $blanco solid;
-    border-radius:.3rem;
-    transition:all .3s ease-in-out;
-}
-.banner__content a:hover {
-    background-color: $peach;
-    border: 1px $peach solid;
-    color:$negro;
-}
+        .banner__content__info {
+            background-color: rgba(0,0,0,0.5);
+            font-family: $contenidos;
+            color:$blanco;
+            padding:1rem;
+            padding-bottom:2rem;
+            animation:pulse;
+            animation-duration: 1.5s;
+        }
+}        
+        
 @keyframes banner {
     0% {
         background-image: url("../img/slider1.jpeg");
-    }
+        }
     33% {
         background-image: url("../img/slider1.jpeg");
     }
     34% {
-        background-image: url("../img/slider2.jpeg");
+                background-image: url("../img/slider2.jpeg");
     }
     66% {
         background-image: url("../img/slider2.jpeg");
-    }
+        }
     67% {
         background-image: url("../img/slider3.jpeg");
-    }
+        }
     100% {
         background-image: url("../img/slider3.jpeg");
+        }
+}
+@media only screen and (min-width:768px) {
+    .banner {
+        height:70vh;
+        .banner__content__info {
+            padding:1rem;
+            padding-bottom:2rem;
+        }
+        .banner__content h2 {
+            padding-bottom: 1.5rem;
+            font-size: 2.5rem; 
+        }  
+        .banner__content p {
+            max-width: 70%;
+            font-size: 1.1rem;
+                    
+        }
+        .banner__content p span {
+            font-weight: bold;
+            color:$peach;
+        }
+    }        
+}        
+
+@media only screen and (min-width:1024px) {
+    .banner {
+        height:70vh;
+    
+        .banner__content__info {
+            padding:1rem;
+            padding-bottom:2rem;
+        }
+        .banner__content h2 {
+            padding-bottom: 1.5rem;
+            font-size: 2.5rem; 
+        }  
+        .banner__content p {
+            max-width: 50%;
+            text-align: justify;
+            font-size: 1.1rem;
+        }
     }
 }
+
+
+
 
 
 
