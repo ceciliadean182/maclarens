@@ -38,6 +38,10 @@
             padding-bottom:1.5rem;
             font-size: $font-size-mobile;
         }
+        .banner__content p span {
+            font-weight: bold;
+            color:$peach;
+        }
         .banner__content a {
             text-decoration:none;
             color:$blanco;
@@ -99,10 +103,7 @@
             font-size: 1.1rem;
                     
         }
-        .banner__content p span {
-            font-weight: bold;
-            color:$peach;
-        }
+        
     }        
 }        
 
