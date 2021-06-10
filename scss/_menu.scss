@@ -21,6 +21,10 @@
 .opciones__img {
     border-radius:$radius-mobile;
 }
+.opciones__img:hover {
+    animation:pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 0.5s;
+}
 
 .opciones__nombre {
     font-family: $principal;
@@ -36,17 +40,6 @@
     color:$peach;
 }
 
-@for $i from 1 through 6 {
-    .opciones:nth-child(#{$i}) .opciones__img:hover {
-        @if ($i % 2 == 0) { 
-            animation:pulse; /* referring directly to the animation's @keyframe declaration */
-            animation-duration: 0.5s;
-             /* número par */
-
-        }@else {
-            animation:headShake;
-            animation-duration: 1s;
-            
-        }  
-    } 
+section.promociones.container {
+    margin-bottom:$margin-mobile;
 }

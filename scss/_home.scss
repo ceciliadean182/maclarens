@@ -38,6 +38,10 @@
             padding-bottom:1.5rem;
             font-size: $font-size-mobile;
         }
+        .banner__content p span {
+            font-weight: bold;
+            color:$peach;
+        }
         .banner__content a {
             text-decoration:none;
             color:$blanco;
@@ -97,11 +101,6 @@
         .banner__content p {
             max-width: 70%;
             font-size: 1.1rem;
-                    
-        }
-        .banner__content p span {
-            font-weight: bold;
-            color:$peach;
         }
     }        
 }        
@@ -124,6 +123,25 @@
             font-size: 1.1rem;
         }
     }
+}
+
+/* promociones */
+.promo {
+    width:100%;
+    display: flex;
+    flex-direction:row;
+        .promo__img {
+            width:400px;
+            height:auto;
+            background-color:white;
+            padding:10px 10px 50px 10px;
+            border:1px solid #BFBFBF;
+            box-shadow:10px 10px 30px rgba(0, 0, 0, 0.8);
+            transform:rotate(-5deg);
+        }
+        .promo__text {
+            font-size: 1rem;
+        }
 }
 
 
