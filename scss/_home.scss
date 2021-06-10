@@ -101,9 +101,13 @@
         .banner__content p {
             max-width: 70%;
             font-size: 1.1rem;
+<<<<<<< HEAD
                     
         }
         
+=======
+        }
+>>>>>>> 89f40e028db0354dbcddbb690b890389d0d3969d
     }        
 }        
 
@@ -128,15 +132,6 @@
 }
 
 
-
-
-
-
-    
-
-
-
-
 .promociones {
    @include flex-center;
 
@@ -159,7 +154,7 @@
     .presentacion__textos {
         font-size:$contenidos;
         font-size:1rem;
-        width:50%;
+        width: 50%;
         color:$negro;
         font-weight: bold;
         margin-top:1.5rem;

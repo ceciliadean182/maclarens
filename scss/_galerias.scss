@@ -42,10 +42,10 @@
     display: grid;
     grid-template-columns: repeat(1,1fr);
     grid-auto-rows: 200px;
-    grid-gap:5px;
+    grid-gap:0.5rem;
 }
 
-.itemImagen {
+.containerImagen__img {
     width:100%;
     height: 100%;
     object-fit: cover; /*la imagen ocupa ese ancho/alto pero sin distorsión*/
@@ -111,6 +111,13 @@
     }
     .containerImagen:nth-child(11) {
         grid-row: span 2;
+    }
+    .containerImagen__img {
+        filter: grayscale(1);
+    }
+    .containerImagen__img:hover {
+        filter: grayscale(0);
+        
     }
 }
 
