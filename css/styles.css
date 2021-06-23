@@ -495,10 +495,15 @@ textarea {
 .menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px; }
+  grid-gap: 10px;
+  background-image: url(../img/comida2.jpg);
+  background-image: fit;
+  padding: 10px; }
   .menu .menu__categorias {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    background-color: black;
+    opacity: 0.95; }
     .menu .menu__categorias h3 {
       color: #ffbd59;
       font-family: "Roboto Mono", monospace;
@@ -510,7 +515,10 @@ textarea {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-weight: bold; }
+        font-weight: bold;
+        color: whitesmoke; }
+      .menu .menu__categorias .menu__item .menu__titulo {
+        color: whitesmoke; }
       .menu .menu__categorias .menu__item .puntos hr {
         display: flex;
         align-items: center;
@@ -520,7 +528,7 @@ textarea {
       .menu .menu__categorias .menu__item .menu__descripcion {
         grid-column-start: 1;
         grid-column-end: 4;
-        color: gray; }
+        color: gainsboro; }
 
 .tragos {
   display: flex;

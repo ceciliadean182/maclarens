@@ -4,9 +4,14 @@
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-gap: 10px;
+    background-image: url(../img/comida2.jpg);
+    background-image: fit;
+    padding: 10px;
         .menu__categorias {
             display: flex;
             flex-wrap: wrap;
+            background-color: black;
+            opacity: 0.95;
                 h3 {
                     color:$peach;
                     font-family: $principal;
@@ -20,6 +25,10 @@
                         align-items:center;
                         justify-content: center;
                         font-weight: bold;
+                        color:$blanco;
+                    }
+                    .menu__titulo {
+                        color:$blanco;
                     }
                     .puntos hr {
                         display: flex;
@@ -33,7 +42,7 @@
                     .menu__descripcion {
                         grid-column-start: 1;
                         grid-column-end:4;
-                        color:gray;
+                        color:gainsboro;
                     }
                     
             }
