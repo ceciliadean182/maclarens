@@ -1,5 +1,48 @@
 @import "generales.scss";
 
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+        .menu__categorias {
+            display: flex;
+            flex-wrap: wrap;
+                h3 {
+                    color:$peach;
+                    font-family: $principal;
+                    font-size: 3rem;
+                }
+            .menu__item {
+                display:grid;
+                grid-template-columns: 1.5fr 1fr 0.5fr;
+                    .menu__precio {
+                        display: flex;
+                        align-items:center;
+                        justify-content: center;
+                        font-weight: bold;
+                    }
+                    .puntos hr {
+                        display: flex;
+                        align-items:center;
+                        justify-content: center;
+                        color: $peach-intenso;
+                        height:0.3rem;
+                        
+
+                    }
+                    .menu__descripcion {
+                        grid-column-start: 1;
+                        grid-column-end:4;
+                        color:gray;
+                    }
+                    
+            }
+        }
+}
+
+
+
+
 .tragos {
     display: flex;
     flex-direction: row;

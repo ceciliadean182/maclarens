@@ -1,40 +1,7 @@
 @import "generales.scss";
 
 /* comida */
-.comida {
-    display:grid;
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows:300px;
-    grid-row-gap:15px;
 
-    .comida__multimedia--img {
-        width:100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 3px;
-    }
-    .comida__multimedia--img:hover {
-        border:$peach 2px solid;
-    }
-}        
-@media only screen and (min-width:768px) {
-    .comida {
-        grid-template-columns: repeat(3,1fr);
-    }
-    .comida__multimedia {
-        grid-row: span 2;
-        grid-column:span 3;
-    }
-}
-@media only screen and (min-width:1024px) {
-    .comida {
-        grid-template-columns: repeat(6,1fr);
-        grid-column-gap:15px
-    }
-    .comida__multimedia {
-        grid-column:span 3;
-    }
-}
 
 /* galería */
 
