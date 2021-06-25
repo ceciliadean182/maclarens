@@ -1,44 +1,86 @@
 @import "generales.scss";
-/*
+
+.menu__presentacion {
+    background-color: $negro;
+    background-image: url("../img/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .menu__presentacion__titulo {
+        color:white;
+        font-weight: bold;
+        font-style: italic;
+        padding: 50px;
+        text-align: center;
+        margin:0;
+        font-family:$sub-titulos;
+        font-size: 1.8rem;
+        animation:slideInUp; 
+        animation-duration: 1.5s;
+        .line {
+            color:$peach-intenso;
+            height: 3.5px;
+            width: 150px;
+            margin:auto;
+            margin-top: 10px;
+        }
+    }
+}
 .menu {
-    display:grid;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-image: url("../img/menu3.jpg");
+    background-repeat: repeat-y;
     .menu__categorias {
-        display:flex;
+        display: flex;
         flex-wrap: wrap;
-        padding:$padding-mobile * 2;
-        background-color: $negro;
+        background-color: black;
+        opacity: 0.91;
+        padding:1.5rem;
+        
         h3 {
             color:$peach;
-            font-family:$principal;
-            font-size:1.8rem;
+            font-family: $principal;
+            font-size: 1.5rem;
         }
         .menu__item {
             display:grid;
             grid-template-columns: 1.5fr 0.5fr;
-                .menu__precio {
-                    display: flex;
-                    align-items:center;
-                    justify-content: center;
-                    font-weight: bold;
-                    color:$blanco;
-                }
-                .menu__titulo {
-                    color:$blanco;
-                }
-                .puntos hr {
-                    display:none;
-                    
-
-                }
-                .menu__descripcion {
-                    grid-column-start: 1;
-                    grid-column-end:4;
-                    color:gainsboro;
-                }
+            .menu__precio {
+                display: flex;
+                align-items:center;
+                justify-content: center;
+                font-weight: bold;
+                color:white;
             }
+            .menu__titulo {
+                color:white;
+                font-size: 1.20rem;
+                font-family: $sub-titulos;
+                font-weight: bold;
             }
+            .menu__titulo span {
+                margin-left: 0.5rem;
+                font-size: 0.9rem;
+                
+            }
+            .puntos hr {
+                display:none;
+            }
+            .menu__descripcion {
+                grid-column-start: 1;
+                grid-column-end:4;
+                color:rgb(185, 185, 185);
+                font-family: $contenidos;
+            }
+            .menu__descripcion a {
+                text-decoration: none;
+                color:gainsboro;
+            }
+                
+        }
+    }    
 }
-*/
+
 
 
 @media only screen and (min-width:1024px) {
@@ -46,51 +88,40 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
         /*grid-gap:0.8rem;*/
-        background-image: url("../img/menu3.jpg");
+        background-image: url("../img/menu2.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         .menu__categorias:nth-child(1) {
-            padding-top:1.5rem;
-            padding-left:1.5rem;
+            padding-top:2rem;
+            padding-left:2rem;
         }
         .menu__categorias:nth-child(2) {
-            padding-top:1.5rem;
-            padding-right:0.8rem;
+            padding-top:2rem;
         }
         .menu__categorias:nth-child(3) {
-            padding-left:1.5rem;
+            padding-left:2rem;
+            padding-bottom: 1.5rem;
         }
         .menu__categorias:nth-child(4) {
-            padding-right:0.8rem;
+            padding-bottom:1.5rem;
         }
         .menu__categorias {
             display: flex;
             flex-wrap: wrap;
-            background-color: black;
-            opacity: 0.85;
-            padding-left:1rem;
-            padding-bottom: 1rem;
             
             h3 {
-                color:$peach;
-                font-family: $principal;
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             .menu__item {
                 display:grid;
                 grid-template-columns: 1.5fr 1fr 0.5fr;
-                .menu__precio {
-                    display: flex;
-                    align-items:center;
-                    justify-content: center;
-                    font-weight: bold;
-                    color:$blanco;
-                }
+                
                 .menu__titulo {
-                    color:$blanco;
+                    font-size: 1.5rem;
                 }
                 .menu__titulo span {
                     margin-left: 0.5rem;
+                    font-size: 1rem;
                 }
                 .puntos hr {
                     display: flex;
@@ -102,14 +133,9 @@
                 .menu__descripcion {
                     grid-column-start: 1;
                     grid-column-end:4;
-                    color:gainsboro;
+                    color:rgb(185, 185, 185);
                     width: 90%;
-                }
-                .menu__descripcion a {
-                    text-decoration: none;
-                    color:gainsboro;
-                }
-                    
+                }      
             }
         }    
     }
