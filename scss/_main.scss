@@ -6,26 +6,41 @@
     padding:0;
 }
 .main {
-    padding:20px;
-    background-color:$blanco;
-    height:100%;
+    background-color: $negro;
+    padding-top:3rem;
+    .main__intro {
+        margin-bottom: 3rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 12px;
+        padding-right:12px;
 
-    .main__titulo {
-        font-size:1.5rem;
-        font-family:$principal;
-        color:$peach-intenso;
-        margin-top:1rem;
-        padding-bottom:1.5rem;
-        text-align: center;
-    }
-    @media only screen and (min-width:768px) {
         .main__titulo {
-            font-size: 1.8rem;
-        }    
-    } 
-    @media only screen and (min-width:1024px) {
-        .main__titulo {
+            text-align: center;
+            font-family: $sub-titulos;
+            font-weight: bold;
             font-size: 2.5rem;
-        }    
-    }       
-}
+            color:$blanco;
+            
+        }
+        .separacion {
+            color:$peach-intenso;
+            height: 3.9px;
+            width: 70%;
+            margin:auto;
+            margin-top: 1rem;
+        }
+        @media only screen and (min-width:768px) {
+            .separacion {
+                width:60%;
+            }
+        }
+        @media only screen and (min-width:1024px) {
+            .separacion {
+                width:45%;
+            }
+        }
+    }
+    
+} 
+

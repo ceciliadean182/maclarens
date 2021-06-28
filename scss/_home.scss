@@ -14,6 +14,7 @@
     transition: all 0.2s ease-in-out;
     background-image: url("../img/slider1.jpeg");
     animation: banner linear 15s infinite;
+    margin-bottom: 0px;
 
     .banner__content {
         margin:0px;
@@ -126,16 +127,82 @@
         }
     }
 }
+/* quiénes somos en home */
 
+.nosotros {
+    display:flex;
+    flex-direction:column-reverse;
+    margin-bottom: 2rem;
+    .nosotros__img img {
+        width:100%;
+    }
+    .nosotros__text {
+        border-bottom: 2px $peach solid;
+        margin-bottom: 2rem;
+    }
+    .nosotros__descripcion {
+        text-align: justify;
+        color:$blanco;
+        font-family: $sub-titulos;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        
+       
+    }
+    .nosotros__descripcion a {
+        text-decoration: none;
+        color:$peach;
+    }
+    .nosotros__descripcion span {
+        color:$peach;
+    }
+        
+ }
+ @media only screen and (min-width:768px) {
+     .nosotros__descripcion {
+         font-size: 1.5rem;
+     }
+ }
+ @media only screen and (min-width:1024px) {
+    .nosotros {
+        display:flex;
+        flex-direction: row-reverse;
+        
+        .nosotros__text {
+            border-bottom: none;
+            margin-bottom: 0;
+            margin-left: 0.5rem;
+            width:50%;
+            .nosotros__descripcion {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            }
+            .nosotros__descripcion:nth-child(4) {
+                margin-bottom: 0;
+            }
+        }  
+        .nosotros__img img {
+            height:100%;
+            width:100%;
+        }  
+    }
+}
 
 .promociones {
    @include flex-center;
 
     .promociones__item {
-        background-color:$negro;
-        color:$blanco;
+        background-color:$blanco;
+        color:$negro;
+        font-family: $sub-titulos;
         border:none;
         height:100%;
+        .card-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-align: center;
+        }
         
         .promociones__img {
             height:100%;

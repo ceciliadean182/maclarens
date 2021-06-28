@@ -170,22 +170,32 @@
   padding: 0; }
 
 .main {
-  padding: 20px;
-  background-color: whitesmoke;
-  height: 100%; }
-  .main .main__titulo {
-    font-size: 1.5rem;
-    font-family: "Roboto Mono", monospace;
-    color: #fda219;
-    margin-top: 1rem;
-    padding-bottom: 1.5rem;
-    text-align: center; }
-  @media only screen and (min-width: 768px) {
-    .main .main__titulo {
-      font-size: 1.8rem; } }
-  @media only screen and (min-width: 1024px) {
-    .main .main__titulo {
-      font-size: 2.5rem; } }
+  background-color: black;
+  padding-top: 3rem; }
+  .main .main__intro {
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 12px;
+    padding-right: 12px; }
+    .main .main__intro .main__titulo {
+      text-align: center;
+      font-family: "Open Sans Condensed", sans-serif;
+      font-weight: bold;
+      font-size: 2.5rem;
+      color: whitesmoke; }
+    .main .main__intro .separacion {
+      color: #fda219;
+      height: 3.9px;
+      width: 70%;
+      margin: auto;
+      margin-top: 1rem; }
+    @media only screen and (min-width: 768px) {
+      .main .main__intro .separacion {
+        width: 60%; } }
+    @media only screen and (min-width: 1024px) {
+      .main .main__intro .separacion {
+        width: 45%; } }
 
 .banner {
   position: relative;
@@ -197,7 +207,8 @@
   background-position: center;
   transition: all 0.2s ease-in-out;
   background-image: url("../img/slider1.jpeg");
-  animation: banner linear 15s infinite; }
+  animation: banner linear 15s infinite;
+  margin-bottom: 0px; }
   .banner .banner__content {
     margin: 0px;
     padding: 0;
@@ -282,14 +293,64 @@
       text-align: justify;
       font-size: 1.1rem; } }
 
+/* quiénes somos en home */
+.nosotros {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 2rem; }
+  .nosotros .nosotros__img img {
+    width: 100%; }
+  .nosotros .nosotros__text {
+    border-bottom: 2px #ffbd59 solid;
+    margin-bottom: 2rem; }
+  .nosotros .nosotros__descripcion {
+    text-align: justify;
+    color: whitesmoke;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem; }
+  .nosotros .nosotros__descripcion a {
+    text-decoration: none;
+    color: #ffbd59; }
+  .nosotros .nosotros__descripcion span {
+    color: #ffbd59; }
+
+@media only screen and (min-width: 768px) {
+  .nosotros__descripcion {
+    font-size: 1.5rem; } }
+
+@media only screen and (min-width: 1024px) {
+  .nosotros {
+    display: flex;
+    flex-direction: row-reverse; }
+    .nosotros .nosotros__text {
+      border-bottom: none;
+      margin-bottom: 0;
+      margin-left: 0.5rem;
+      width: 50%; }
+      .nosotros .nosotros__text .nosotros__descripcion {
+        margin-top: 0;
+        margin-bottom: 1rem; }
+      .nosotros .nosotros__text .nosotros__descripcion:nth-child(4) {
+        margin-bottom: 0; }
+    .nosotros .nosotros__img img {
+      height: 100%;
+      width: 100%; } }
+
 .promociones {
   display: flex;
   justify-content: center; }
   .promociones .promociones__item {
-    background-color: black;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    color: black;
+    font-family: "Open Sans Condensed", sans-serif;
     border: none;
     height: 100%; }
+    .promociones .promociones__item .card-title {
+      font-weight: bold;
+      font-size: 1.5rem;
+      text-align: center; }
     .promociones .promociones__item .promociones__img {
       height: 100%;
       object-fit: cover; }
@@ -481,12 +542,30 @@ textarea {
   .eventos .eventos__fechas--styles:hover {
     border-bottom: #ffbd59 3px solid; }
 
-.menu__presentacion {
+.menu__presentacion--comida {
   background-color: black;
   background-image: url("../img/banner1.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
-  .menu__presentacion .menu__presentacion__titulo {
+  background-size: cover;
+  /*color:white;
+        font-weight: bold;
+        font-style: italic;
+        padding: 50px;
+        text-align: center;
+        margin:0;
+        font-family:$sub-titulos;
+        font-size: 1.8rem;
+        animation:slideInUp; 
+        animation-duration: 1.5s;
+        .line {
+            color:$peach-intenso;
+            height: 3.5px;
+            width: 150px;
+            margin:auto;
+            margin-top: 10px;
+        }
+    }*/ }
+  .menu__presentacion--comida .menu__presentacion__titulo {
     color: white;
     font-weight: bold;
     font-style: italic;
@@ -497,7 +576,7 @@ textarea {
     font-size: 1.8rem;
     animation: slideInUp;
     animation-duration: 1.5s; }
-    .menu__presentacion .menu__presentacion__titulo .line {
+    .menu__presentacion--comida .menu__presentacion__titulo .line {
       color: #fda219;
       height: 3.5px;
       width: 150px;
@@ -547,6 +626,14 @@ textarea {
         text-decoration: none;
         color: gainsboro; }
 
+@media only screen and (min-width: 768px) {
+  .menu__presentacion .menu__presentacion__titulo {
+    font-size: 2.2rem; }
+    .menu__presentacion .menu__presentacion__titulo .line {
+      width: 200px; }
+  .menu {
+    background-repeat: repeat; } }
+
 @media only screen and (min-width: 1024px) {
   .menu {
     display: grid;
@@ -588,7 +675,42 @@ textarea {
           grid-column-start: 1;
           grid-column-end: 4;
           color: #b9b9b9;
-          width: 90%; } }
+          width: 90%; }
+  .menu__presentacion--bebidas {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 2rem;
+    height: auto; } }
+
+.menu__presentacion--bebidas {
+  background-color: black;
+  background-image: url("../img/drink2.jpg");
+  background-position: 10%; }
+  .menu__presentacion--bebidas .menu__presentacion__titulo {
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    padding: 50px;
+    text-align: center;
+    margin: 0;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 1.8rem;
+    animation: slideInUp;
+    animation-duration: 1.5s;
+    animation: slideInLeft;
+    animation-duration: 2.5s; }
+    .menu__presentacion--bebidas .menu__presentacion__titulo .line {
+      color: #fda219;
+      height: 3.5px;
+      width: 150px;
+      margin: auto;
+      margin-top: 10px; }
+
+.bebidas {
+  background-image: url("../img/drink3.jpg");
+  background-size: cover;
+  background-color: whitesmoke;
+  padding-top: 1rem; }
 
 .tragos {
   display: flex;
@@ -600,7 +722,7 @@ textarea {
   background-color: black;
   text-align: center;
   margin-bottom: 2.5rem;
-  box-shadow: 0px 0px 5px 5px black;
+  box-shadow: 0px 0px 2px 2px black;
   padding: 10px;
   border-radius: 5px;
   height: auto;
@@ -611,7 +733,6 @@ textarea {
 
 .opciones__img:hover {
   animation: pulse;
-  /* referring directly to the animation's @keyframe declaration */
   animation-duration: 0.5s; }
 
 .opciones__nombre {
@@ -622,7 +743,8 @@ textarea {
 
 .opciones__precio {
   margin-top: 2rem;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: bold;
   font-size: 1.5rem;
   color: #ffbd59; }
 

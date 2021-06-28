@@ -1,12 +1,6 @@
 @import "generales.scss";
-
-.menu__presentacion {
-    background-color: $negro;
-    background-image: url("../img/banner1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    .menu__presentacion__titulo {
-        color:white;
+@mixin menu-presentacion-titulo {
+    color:white;
         font-weight: bold;
         font-style: italic;
         padding: 50px;
@@ -23,7 +17,34 @@
             margin:auto;
             margin-top: 10px;
         }
+}
+
+.menu__presentacion--comida {
+    background-color: $negro;
+    background-image: url("../img/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .menu__presentacion__titulo {
+        @include menu-presentacion-titulo;
     }
+        /*color:white;
+        font-weight: bold;
+        font-style: italic;
+        padding: 50px;
+        text-align: center;
+        margin:0;
+        font-family:$sub-titulos;
+        font-size: 1.8rem;
+        animation:slideInUp; 
+        animation-duration: 1.5s;
+        .line {
+            color:$peach-intenso;
+            height: 3.5px;
+            width: 150px;
+            margin:auto;
+            margin-top: 10px;
+        }
+    }*/
 }
 .menu {
     display: grid;
@@ -80,7 +101,19 @@
         }
     }    
 }
-
+@media only screen and (min-width:768px) {
+    .menu__presentacion {
+        .menu__presentacion__titulo {
+            font-size: 2.2rem;
+            .line {
+                width: 200px;
+            }
+        }
+    }
+    .menu {
+        background-repeat: repeat;
+    }
+}
 
 
 @media only screen and (min-width:1024px) {
@@ -139,25 +172,46 @@
             }
         }    
     }
+    .menu__presentacion--bebidas {
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-position-x: 2rem;
+        height:auto;
+    }    
 }
 
+.menu__presentacion--bebidas {
+    background-color: $negro;
+    background-image: url("../img/drink2.jpg");
+    background-position:10%;
+    
+    .menu__presentacion__titulo {
+        
+        @include menu-presentacion-titulo;
+        animation:slideInLeft; 
+        animation-duration: 2.5s;
+    }
+}    
 
 
-
+.bebidas {
+    background-image: url("../img/drink3.jpg");
+    background-size: cover;
+    background-color: $blanco;
+    padding-top: 1rem;
+}
 
 .tragos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
-
 .opciones {
     background-color: $negro;
     text-align: center;
     margin-bottom:2.5rem;
-    box-shadow: 0px 0px 5px 5px $negro;
+    box-shadow: 0px 0px 2px 2px $negro;
     padding: 10px;
     border-radius: 5px;
     height:auto;
@@ -167,7 +221,7 @@
     border-radius:$radius-mobile;
 }
 .opciones__img:hover {
-    animation:pulse; /* referring directly to the animation's @keyframe declaration */
+    animation:pulse; 
     animation-duration: 0.5s;
 }
 
@@ -180,7 +234,8 @@
 
 .opciones__precio {
     margin-top:2rem;
-    font-family: $principal;
+    font-family: $sub-titulos;
+    font-weight: bold;
     font-size: 1.5rem;
     color:$peach;
 }
@@ -188,3 +243,4 @@
 section.promociones.container {
     margin-bottom:$margin-mobile;
 }
+
