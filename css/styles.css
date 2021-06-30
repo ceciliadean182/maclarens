@@ -712,7 +712,8 @@ textarea {
     padding-right: 3rem;
     padding-bottom: 4rem; }
   .contacto__maps {
-    width: 50%; }
+    width: 50%;
+    margin-top: 0; }
   .contacto__maps iframe {
     height: 100%;
     width: 100%; }
