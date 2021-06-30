@@ -1,10 +1,27 @@
 @import "generales.scss";
+@import "menu.scss";
 
-/* comida */
+
 
 
 /* galería */
+.menu__presentacion--galeria {
+    background-color: $negro;
+    background-image: url("../img/galeria0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    .menu__presentacion__titulo {
+        @include menu-presentacion-titulo;
 
+    }
+}
+.galeria {
+    background-color: $negro;
+    margin:0;
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
 .galeriaContainer {
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -48,7 +65,7 @@
 }
 .containerImagen:nth-child(9) {
     grid-column: span 2;
-    grid-row: span 2;
+    grid-row: span 3;
 }
 
 .containerImagen:nth-child(10) {
@@ -66,6 +83,9 @@
     .galeriaContainer {
         grid-template-columns: repeat(4,1fr);
     }
+    .containerImagen:nth-child(11) {
+        grid-row: span 2;
+    }
 }
 
 @media only screen and (min-width:1024px) {
@@ -74,6 +94,9 @@
         grid-auto-rows: 300px;
     }
     .containerImagen:nth-child(2) {
+        grid-row: span 2;
+    }
+    .containerImagen:nth-child(9) {
         grid-row: span 2;
     }
     .containerImagen:nth-child(11) {
