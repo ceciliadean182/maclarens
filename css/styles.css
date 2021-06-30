@@ -940,7 +940,7 @@ section.promociones.container {
 /* galería */
 .menu__presentacion--galeria {
   background-color: black;
-  background-image: url("../img/galeria0.jpg");
+  background-image: url("../img/bar.jpg");
   background-repeat: no-repeat;
   background-size: cover; }
   .menu__presentacion--galeria .menu__presentacion__titulo {
@@ -1251,11 +1251,10 @@ section.promociones.container {
 
 .menu__presentacion--eventos {
   background-color: black;
-  background-image: url("../img/contacto2.jpg");
-  background-repeat: no-repeat;
+  background-image: url("../img/eventos.jpg");
+  background-repeat: repeat;
   background-size: cover;
-  background-position-y: 50%;
-  background-position-x: 19%; }
+  background-position: center; }
   .menu__presentacion--eventos .menu__presentacion__titulo {
     color: white;
     font-weight: bold;

@@ -3,11 +3,10 @@
 
 .menu__presentacion--eventos {
     background-color: $negro;
-    background-image: url("../img/contacto2.jpg");
-    background-repeat: no-repeat;
+    background-image: url("../img/eventos.jpg");
+    background-repeat: repeat;
     background-size: cover;
-    background-position-y: 50%;
-    background-position-x: 19%;
+    background-position:center;
     .menu__presentacion__titulo {
         @include menu-presentacion-titulo;
     }
