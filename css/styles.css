@@ -111,6 +111,9 @@
       display: inline-block;
       margin-left: 0.2rem;
       margin-bottom: 0.2rem; }
+    .footer .footer__container .footer__container--columna p a {
+      text-decoration: none;
+      color: whitesmoke; }
     .footer .footer__container .footer__menu {
       list-style: none;
       padding: 0; }

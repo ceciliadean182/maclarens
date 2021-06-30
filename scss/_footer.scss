@@ -48,6 +48,10 @@
                 margin-left: $margin-mobile;
                 margin-bottom:$margin-mobile;
             }
+            .footer__container--columna p a {
+                text-decoration: none;
+                color:$blanco;
+            }
             
         .footer__menu  {
                 list-style: none;
