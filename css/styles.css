@@ -29,6 +29,15 @@
   .header .navegacion__logo:hover {
     transform: rotateZ(360deg);
     transition: 1s; }
+  @media only screen and (min-width: 768px) {
+    .header .header {
+      height: 75px; }
+    .header .navegacion__titulo {
+      font-size: 2rem; }
+    .header .navegacion__logo {
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50px; } }
   @media only screen and (min-width: 1024px) {
     .header .header {
       height: 75px; }
@@ -1273,13 +1282,6 @@ section.promociones.container {
       margin: auto;
       margin-top: 10px; }
 
-.lines {
-  color: black;
-  height: 310px;
-  width: 90px;
-  margin-top: 10px;
-  align-self: center; }
-
 .eventos {
   padding-top: 2rem;
   padding-bottom: 3rem;
@@ -1316,7 +1318,6 @@ section.promociones.container {
   flex-direction: column; }
 
 .flip-card .inner .front {
-  /*background-image: url("../img/postre.jpg");*/
   color: black;
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
@@ -1396,7 +1397,7 @@ section.promociones.container {
 .flip-card .inner .back {
   transform: rotateY(180deg); }
 
-.flip-card:focus, .flip-card:active .inner {
+.flip-card:active .inner {
   transform: rotateY(180deg); }
 
 @media only screen and (min-width: 768px) {

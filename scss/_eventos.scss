@@ -11,13 +11,7 @@
         @include menu-presentacion-titulo;
     }
 } 
-.lines {
-color:$negro;
-            height: 310px;
-            width: 90px;
-            margin-top: 10px;
-            align-self: center;
-        }
+
 .eventos {
     padding-top: 2rem;
     padding-bottom: 3rem;
@@ -55,7 +49,6 @@ color:$negro;
     flex-direction: column;
   }
   .flip-card .inner .front {
-    /*background-image: url("../img/postre.jpg");*/
     color:$negro;
     font-family: $sub-titulos;
     font-weight: bold;
@@ -138,7 +131,7 @@ color:$negro;
   .flip-card .inner .back {
     transform: rotateY(180deg);
   }
-  .flip-card:focus, .flip-card:active .inner {
+  .flip-card:active .inner {
     transform: rotateY(180deg);
   }
 @media only screen and (min-width:768px) {
