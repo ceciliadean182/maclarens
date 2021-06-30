@@ -1,26 +1,63 @@
 @import "generales.scss";
+@import "menu.scss";
+
+.menu__presentacion--contacto {
+    background-color: $negro;
+    background-image: url("../img/contacto2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 50%;
+    background-position-x: 19%;
+    .menu__presentacion__titulo {
+        @include menu-presentacion-titulo;
+    }
+}    
+
 
 .contacto {
-    text-align: center;
-    border-radius:.5rem;
+    background-image: url("../img/pub.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction:column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top:3rem;
+    padding-bottom:3rem;
+}
+
+.contacto__maps iframe {
+    height:100%;
+    width:100%;
+    opacity:0.9;
+}
+.contacto__maps {
+    margin-top:2rem;
+}
+.contacto__form {
     padding-top:1rem;
     padding-bottom:1rem;
-    padding-left:1rem;
-    padding-right:1rem;
+    padding-left:0.5rem;
+    padding-right:0.5rem;
     background-color:$peach;
+    text-align: center;
+    opacity: 0.85;
 }
 
 label {
-    font-family:$contenidos;
+    font-family:$sub-titulos;
+    font-weight: bold;
     color:$negro;
     margin-bottom:$margin-mobile;
 }
 
 input {
     border:$peach 2px solid;
+    border-radius: 8px;
     padding: $padding-mobile;
-    width: $width-mobile;
+    width:$width-mobile;
     margin-bottom:$margin-mobile;
+    text-align:center;
 }
 .formulario__promociones {
     width:auto;
@@ -60,19 +97,23 @@ select {
     font-size:1rem; 
     color:$negro;
     border:$peach solid 2px;
+    border-radius: 8px;
     width:$width-mobile;
     height:2.5rem;
 }
 
 textarea {
     border:$peach 2px solid;
+    border-radius: 8px;
     width:15rem;
 }
 
 @media only screen and (min-width:768px) {
     .contacto {
-        border-radius:$radius-mobile *4;
-    }    
+    padding-left: 3rem;
+    padding-right:3rem;
+    padding-bottom:4rem;
+}
     label {
         margin-bottom:$margin-mobile *2;
     }
@@ -87,9 +128,23 @@ textarea {
     }
 }
 @media only screen and (min-width:1024px) {
-    .contacto {
-        border-radius:$radius-mobile *6;
+    .contacto__form {
+        width:50%;
     } 
+    .contacto {
+        display:flex;
+        flex-direction: row;
+        padding-left: 3rem;
+        padding-right:3rem;
+        padding-bottom:4rem;
+    }
+    .contacto__maps {
+        width:50%;
+    }
+    .contacto__maps iframe {
+        height:100%;
+        width:100%;
+    }
     label {
         margin-bottom:$margin-mobile;
     }
