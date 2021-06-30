@@ -131,7 +131,7 @@
   .flip-card .inner .back {
     transform: rotateY(180deg);
   }
-  .flip-card:active .inner {
+  .flip-card:hover .inner {
     transform: rotateY(180deg);
   }
 @media only screen and (min-width:768px) {
